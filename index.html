@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Parallax Scroll Website</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;0,800;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">MS</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+          <img src="images/stars.png" id="stars">
+          <img src="images/moon.png" id="moon">
+          <img src="images/mountains_behind.png" id="mountains_behind">
+          <h2 id="text">Moon Light</h2>
+          <a href="#sec" id="btn">Explore</a>
+          <img src="images/mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Tales by moon light</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum. <br/><br/>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+            et dolore magna aliqua. Nibh ipsum consequat nisl vel pretium. Mauris cursus mattis molestie a iaculis. 
+            Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Quam elementum pulvinar etiam non quam. 
+            Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Pulvinar proin gravida hendrerit lectus a. 
+            Id ornare arcu odio ut sem nulla pharetra diam sit. Eget est lorem ipsum dolor sit amet consectetur adipiscing 
+            elit. Tellus integer feugiat scelerisque varius morbi. Tristique senectus et netus et malesuada fames ac turpis. 
+            Ac tincidunt vitae semper quis lectus nulla at volutpat. Platea dictumst vestibulum rhoncus est pellentesque 
+            elit ullamcorper dignissim. Habitant morbi tristique senectus et.
+            <br/><br/>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            <br/><br/>
+            Et netus et malesuada fames ac turpis egestas. Praesent semper feugiat nibh sed pulvinar. Euismod lacinia 
+            at quis risus sed vulputate odio ut. Massa tincidunt dui ut ornare lectus sit amet est placerat. Ut porttitor 
+            leo a diam. Pharetra massa massa ultricies mi quis hendrerit. Pulvinar elementum integer enim neque volutpat ac. 
+            Semper quis lectus nulla at volutpat diam ut venenatis tellus. Facilisis sed odio morbi quis. Risus viverra 
+            adipiscing at in tellus. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Purus gravida quis blandit turpis 
+            cursus in hac habitasse. Iaculis eu non diam phasellus vestibulum lorem. Lectus quam id leo in vitae. Et leo duis ut 
+            diam quam nulla porttitor massa id. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu.
+            </p>
+        </div>
+        <script>
+            let stars = document.getElementById("stars");
+            let moon = document.getElementById("moon");
+            let mountains_behind = document.getElementById("mountains_behind");
+            let mountains_front = document.getElementById("mountains_front");
+            let text = document.getElementById("text");
+            let btn = document.getElementById("btn");
+            let header = document.getElementById("header");
+
+            window.addEventListener("scroll", function(e) {
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
